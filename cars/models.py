@@ -9,7 +9,7 @@ class Car(models.Model):
   colour = models.CharField(max_length=50, default=None)
   steering = models.CharField(max_length=20, default=None)
   passengers = models.IntegerField(default=None)
-  description = models.CharField(max_length=1500, default=None)
+  description = models.TextField(max_length=1500, default=None)
   minprice = models.IntegerField(default=None)
   hourly = models.IntegerField(default=None)
 

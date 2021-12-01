@@ -2,14 +2,14 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
 from .models import Car
-from .serializers import CarSerializer
+from .serializers import CarSerializer, PopulatedCarSerializer
 from django.http.response import HttpResponse
 
 class CarDetailView(APIView): # ONE OBJECT
   def get(self, request, pk): # pk = id-integer # GET ONE OBJECT
     car = Car.objects.get(id=pk) # find object by id
     print(car)
-    serialized_car = CarSerializer(car) # formatting data
+    serialized_car = PopulatedCarSerializer(car) # formatting data
     return Response(serialized_car.data, status=status.HTTP_200_OK)
 
   def delete(self, request, pk): # pk = id-integer # DELETE ONE OBJECT
@@ -40,7 +40,7 @@ class CarIndexView(APIView):
     print("CARS********->", cars) # returns a queryset, needs to be converted
     # serialize the response, to convert into python
 
-    serialised_cars = CarSerializer(cars, many=True)
+    serialised_cars = PopulatedCarSerializer(cars, many=True)
 
     print('SERIALISED CARS *********->', serialised_cars.data)
     # return the response as JSON
