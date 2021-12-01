@@ -5,7 +5,7 @@ class Car(models.Model):
   title = models.CharField(max_length=50, default=None)
   colour = models.CharField(max_length=50, default=None)
   year = models.IntegerField(default=None)
-  image = models.CharField(max_length=500, default=None)
+  picture = models.CharField(max_length=500, default=None)
   colour = models.CharField(max_length=50, default=None)
   steering = models.CharField(max_length=20, default=None)
   passengers = models.IntegerField(default=None)
