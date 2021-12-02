@@ -1,0 +1,22 @@
+[
+{
+  "model": "reviews.review",
+  "pk": 1,
+  "fields": {
+    "title": "Amazing Experience!",
+    "rating": 5,
+    "text": "Love this Car!",
+    "car": 4
+  }
+},
+{
+  "model": "reviews.review",
+  "pk": 2,
+  "fields": {
+    "title": "Best Car!",
+    "rating": 4,
+    "text": "TExt text text",
+    "car": 4
+  }
+}
+]

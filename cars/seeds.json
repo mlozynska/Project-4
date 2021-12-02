@@ -1,0 +1,86 @@
+[
+{
+  "model": "cars.car",
+  "pk": 1,
+  "fields": {
+    "title": "Jaguar E Type",
+    "year": 1970,
+    "picture": "https://static.wixstatic.com/media/027b66_29af6e7f2d5441a2b95c211f833de00e.jpg/v1/fill/w_1095,h_730,al_c,q_85,usm_0.66_1.00_0.01/027b66_29af6e7f2d5441a2b95c211f833de00e.jpg",
+    "colour": "Red",
+    "steering": "Right",
+    "passengers": 2,
+    "description": "The Jaguar E Type has been voted the best car ever built, even Enzo Ferrari said that it was \\\"the most beautiful car he had ever seen.\\\" Surprisingly easy to drive and an absolutely perfect cruiser, any time of year. Presented in a beautiful Claret Red, our E type has been fully re built from the chassis up. The interior is a beautiful place to sit and it is even fitted with a retro radio capable of playing mp3's.     Hiring our Jaguar E type couldn’t be simpler, we include all insurance and give you a lesson on how to drive her competently and how to operate all the controls and put the roof up! The E type is available for self drive hire and for weddings. She is also available for magazine shoots, media publications and corporate events.",
+    "minprice": 600,
+    "hourly": 25,
+    "services": []
+  }
+},
+{
+  "model": "cars.car",
+  "pk": 2,
+  "fields": {
+    "title": "Mercedes 190 sl",
+    "year": 1960,
+    "picture": "https://static.wixstatic.com/media/027b66_b99f6f4e1bea474f80b194b39c161091~mv2_d_2921_1947_s_2.jpg/v1/fill/w_2882,h_1922,al_c,q_90,usm_0.66_1.00_0.01/027b66_b99f6f4e1bea474f80b194b39c161091~mv2_d_2921_1947_s_2.jpg",
+    "colour": "White",
+    "steering": "Left",
+    "passengers": 2,
+    "description": "Our Mercedes 190 SL is available for self drive hire and proves one of our most popular cars to rent especially for weddings. For your special occasion, we can provide a bespoke car transportation service which can include the delivery of this vehicle to your chosen start location and collection from the same address or different address if needed.",
+    "minprice": 720,
+    "hourly": 30,
+    "services": []
+  }
+},
+{
+  "model": "cars.car",
+  "pk": 3,
+  "fields": {
+    "title": "Aston Martin Oscar India V8",
+    "year": 1979,
+    "picture": "https://static.wixstatic.com/media/027b66_64c6f647b02f4538ac244802e8ae4729~mv2_d_3648_2432_s_4_2.jpg/v1/fill/w_2102,h_1402,al_c,q_90,usm_0.66_1.00_0.01/027b66_64c6f647b02f4538ac244802e8ae4729~mv2_d_3648_2432_s_4_2.jpg",
+    "colour": "Blue",
+    "steering": "Right",
+    "passengers": 4,
+    "description": "Our stunning Aston Martin Oscar India for self drive hire. Be Bond for a day, or a week! Our new addition to the fleet is our elegant Aston Martin Oscar India V8 available for self drive hire.      The two rear seats can accommodate children easily or adults on shorter journeys if need be! Available for self drive hire, weddings, corporate events, birthday surprises and any other special occasion you can think of. She is also available for all media work such as photoshoots, magazine shoots, film, TV and Road trips.",
+    "minprice": 696,
+    "hourly": 29,
+    "services": []
+  }
+},
+{
+  "model": "cars.car",
+  "pk": 4,
+  "fields": {
+    "title": "My Car",
+    "year": 1979,
+    "picture": "picture\": \"https://c8.alamy.com/comp/CWK0WN/aerial-view-of-regents-park-london-with-marylebone-road-in-the-foreground-CWK0WN.jpg",
+    "colour": "Multi",
+    "steering": "Right",
+    "passengers": 1,
+    "description": "Beloved One!",
+    "minprice": 250,
+    "hourly": 50,
+    "services": []
+  }
+},
+{
+  "model": "cars.car",
+  "pk": 5,
+  "fields": {
+    "title": "Yuri car",
+    "year": 1956,
+    "picture": "https://www.webbsofweybridge.co.uk/mercedes-190-sl-for-hire",
+    "colour": "White",
+    "steering": "Right",
+    "passengers": 1,
+    "description": "Huge Car!",
+    "minprice": 500,
+    "hourly": 20,
+    "services": [
+      1,
+      2,
+      3
+    ]
+  }
+}
+]

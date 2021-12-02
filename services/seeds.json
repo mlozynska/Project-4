@@ -1,0 +1,29 @@
+[
+{
+  "model": "services.service",
+  "pk": 1,
+  "fields": {
+    "title": "Wedding decoration",
+    "description": "Wedding decorations",
+    "price": "250.00"
+  }
+},
+{
+  "model": "services.service",
+  "pk": 2,
+  "fields": {
+    "title": "Flowers",
+    "description": "Beautiful flowers.",
+    "price": "70.00"
+  }
+},
+{
+  "model": "services.service",
+  "pk": 3,
+  "fields": {
+    "title": "Driver",
+    "description": "Professional",
+    "price": "300.00"
+  }
+}
+]
