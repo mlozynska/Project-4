@@ -37,21 +37,17 @@ class CarIndexView(APIView):
   def get(self, request): # GET ALL OBJECTS
     #get all listings from database
     cars = Car.objects.all()
-    print("CARS********->", cars) # returns a queryset, needs to be converted
-    # serialize the response, to convert into python
 
     serialised_cars = PopulatedCarSerializer(cars, many=True)
-
-    print('SERIALISED CARS *********->', serialised_cars.data)
     # return the response as JSON
     return Response(serialised_cars.data, status=status.HTTP_200_OK)
 
 def home(request):
   cars = Car.objects.all() # all data giving back
   # print(cars)
-  return HttpResponse('<h1>My Parks!</h1>')
+  return HttpResponse('<h1>My Cars!</h1>')
 
 def about(request):
   cars = Car.objects.all()
   # print(cars)
-  return HttpResponse('<h1>About the Park<h1>')
+  return HttpResponse('<h1>About the Car<h1>')

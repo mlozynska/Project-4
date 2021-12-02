@@ -12,6 +12,7 @@ class Car(models.Model):
   description = models.TextField(max_length=1500, default=None)
   minprice = models.IntegerField(default=None)
   hourly = models.IntegerField(default=None)
+  services = models.ManyToManyField("services.Service", blank=True)
 
   def __str__(self):
-    return f'{self.title}'
+    return f"Car: {self.title}"
