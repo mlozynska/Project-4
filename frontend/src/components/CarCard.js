@@ -1,27 +1,40 @@
 import React from 'react'
-import { Card, Image, Container, Header, Segment } from 'semantic-ui-react'
+import { Card, Image, Header, Grid, Segment } from 'semantic-ui-react'
 
 const CarCard = ({ title, year, picture, passengers, minprice, hourly }) => {
 
   return (
     <>
-      <Container>
-        <Card>
-          <Header as="h2" textAlign="center" style={{ margin: '5px 0' }}
+      <Card >
+        <Segment inverted color='black'>
+          <Header as="h3" textAlign="left" color="white"
           > {title}</Header>
-          <Segment style={{ margin: '0 0 10px 0' }} textAlign="center" >Year: {year}</Segment>
-          <Image src={picture} alt={title} style={{ width: '250px', height: '200px' }}></Image>
+          <Header as="h5" textAlign="left" color="white">
+            Year: {year}
+          </Header>
+          <Image src={picture} alt={title} style={{ width: '300px', height: '200px' }}></Image>
           <Card.Content>
-            <Card.Description></Card.Description>
-            <Card.Description>Number of passengers: {passengers}</Card.Description>
-            <Card.Description>Minimum price: £ {minprice}</Card.Description>
-            <Card.Description>Hourly: £ {hourly}</Card.Description>
+            <Grid columns={2} style={{ margin: '0 0' }}>
+              <Grid.Column >
+                <Header as="h5" textAlign="left" color="yellow">
+                  Number of passengers: {passengers}
+                </Header>
+                
+              </Grid.Column>
+              <Grid.Column >
+                <Header as="h5" textAlign="left" color="yellow">
+                  <p>Minimum price: £ {minprice}</p>
+                </Header>
+                <Header as="h5" textAlign="left" color="yellow">
+                  <p>Hourly: £ {hourly}</p>
+                </Header>
+                
+              </Grid.Column>
+            </Grid>
           </Card.Content>
-          <Card.Content extra>
-          </Card.Content>
-        </Card>
-      </Container>
-      
+        </Segment>
+        
+      </Card>
     </>
   )
 

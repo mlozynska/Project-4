@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import CarCard from './CarCard'
+import { Segment, Grid, Header } from 'semantic-ui-react'
 
 const CarIndex = () => {
 
@@ -15,23 +16,32 @@ const CarIndex = () => {
     console.log(cars)
   }, [])
   return (
-    <>
-      <h1>Our Cars</h1>
-      {cars.map(car => {
-        return (
-          <CarCard
-            key={car.id}
-            title={car.title}
-            year={car.year}
-            minprice={car.minprice}
-            hourly={car.hourly}
-            passengers={car.passengers}
-            picture={car.picture}
-          />
-        )
-      })}
+    <Segment inverted color='yellow'>
+      <Segment inverted color='black'>
+        <Header>Our Cars</Header>
+      </Segment>
       
-    </>
+      <Segment  inverted color='black'>
+        <Grid>
+          {cars.map(car => {
+            return (
+              <CarCard
+                key={car.id}
+                title={car.title}
+                year={car.year}
+                minprice={car.minprice}
+                hourly={car.hourly}
+                passengers={car.passengers}
+                picture={car.picture}
+              />
+            )
+          })}
+        </Grid>
+        
+      </Segment>
+      
+      
+    </Segment>
   )
 }
 export default CarIndex

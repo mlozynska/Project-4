@@ -24,7 +24,6 @@ function App() {
         <Route exact path="/" component={Home} />
         <Route exact path="/cars" component={CarIndex} />
         <Route exact path="/cars/:id" component={CarPage} />
-        <h1>Hello World</h1>
       </Switch>
       <Footer />
 

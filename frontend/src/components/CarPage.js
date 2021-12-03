@@ -11,8 +11,10 @@ const CarPage = () => {
   //   const getData = async () => {
   //     const { data: car } = await axios.get(`/api/cars/${id}`)
   //     setCar(car)
+  //     console.log(car)
   //   }
   //   getData()
+    
   // }, [id])
 
   return (
