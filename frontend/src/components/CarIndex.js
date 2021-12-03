@@ -16,10 +16,17 @@ const CarIndex = () => {
   }, [])
   return (
     <>
-      <h1>My Beautiful Cars</h1>
+      <h1>Our Cars</h1>
       {cars.map(car => {
         return (
-          <CarCard key={car.id} title={car.title}
+          <CarCard
+            key={car.id}
+            title={car.title}
+            year={car.year}
+            minprice={car.minprice}
+            hourly={car.hourly}
+            passengers={car.passengers}
+            picture={car.picture}
           />
         )
       })}
