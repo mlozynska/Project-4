@@ -1,11 +1,4 @@
-#navBarSegment {
-  background-color: #d4af37;
-  padding-bottom: 0;
-}
-#navBarImg {
-  height: 35px;
-  margin-top: 10px;
-}
+// ? NavBar
 
 .pNavBar {
   color:black;
@@ -13,7 +6,22 @@
   padding-left: 10px;
 }
 
-.navInfo {
+#navInfo {
   margin: 0;
-  padding: 0;
+  background-color: #d4af37;
 }
+
+#navBarImg {
+  height: 35px;
+  margin-top: 10px;
+}
+
+#navBarSegment {
+  background-color: #d4af37;
+  margin: 0 0;
+  // padding-bottom: 0;
+}
+
+
+
+

@@ -1,31 +1,27 @@
 import React from 'react'
 import { useHistory } from 'react-router-dom'
-import { Segment, Menu, MenuItem, Icon, Header, Grid, Image } from 'semantic-ui-react'
+import { Segment, Menu, Icon, Header, Grid, Image } from 'semantic-ui-react'
 
 const NavBar = () => {
   const history = useHistory()
 
   return (
     <>
-      <Segment id="navBarSegment" basic>
-        <Grid>
-          {/* style={{ color: '#e5cf89' }} */}
-          <Image id="navBarImg" src={'https://www.freeiconspng.com/thumbs/vintage-cars-png/volkswagen-vintage-cars-png-0.png'}/>
-          <Header as="h1" style={{ margin: '10px 0 0 0' }}>VintCars</Header>
+      <Segment style={{ postion: 'relative' }} inverted vertical>
+        <Menu secondary id="navBarSegment">
+          <Menu.Item  style={{ padding: '0' }} onClick={() => history.push('/')}>
+            <Menu.Item  style={{ padding: '0' }}>
+              <Image id="navBarImg" src={'https://www.freeiconspng.com/thumbs/vintage-cars-png/volkswagen-vintage-cars-png-0.png'} style={{ padding: '0 0 0 15px' }}/>
+            </Menu.Item>
+            <Menu.Item style={{ padding: '5px 0' }}>
+              <Header as="h1" style={{ margin: '10px 0 5px 0' }}>VintCars</Header>
+            </Menu.Item>
+          </Menu.Item>
 
-          
-        </Grid>
-        
-        <Menu secondary color="yellow" inverted>
-          <MenuItem position='left'>
-            <Menu.Item onClick={() => history.push('/')}>
-              <Icon name="home" size="large" color="black"/>
-            </Menu.Item>
-            <Menu.Item onClick={() => history.push('/cars')}>
-              <h3>Our Cars</h3>
-            </Menu.Item>
-          </MenuItem>
-          <MenuItem className="navInfo" position="right">
+          <Menu.Item onClick={() => history.push('/cars')} style={{ margin: '17px 0 0 7em' }}>
+            <Header as="h4">Our Cars</Header>
+          </Menu.Item>
+          <Menu.Item id="navInfo" position="right">
             <Grid.Column style={{ padding: '0' }}>
               <Menu.Item style={{ padding: '0' }}>
                 <h5 style={{ color: 'black' }}>Mon-Sat 9am - 6pm</h5>
@@ -39,13 +35,9 @@ const NavBar = () => {
                 <p className="pNavBar">info@vintCars.com</p>
               </Menu.Item>
             </Grid.Column>
-          </MenuItem>
+          </Menu.Item>
         </Menu>
       </Segment>
-
-
-
-
     </>
   )
   
