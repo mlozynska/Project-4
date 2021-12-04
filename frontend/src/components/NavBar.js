@@ -7,7 +7,7 @@ const NavBar = () => {
 
   return (
     <>
-      <Segment style={{ postion: 'relative' }} inverted vertical>
+      <Segment inverted vertical>
         <Menu secondary id="navBarSegment">
           <Menu.Item  style={{ padding: '0' }} onClick={() => history.push('/')}>
             <Menu.Item  style={{ padding: '0' }}>
