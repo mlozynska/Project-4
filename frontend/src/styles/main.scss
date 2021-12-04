@@ -1,5 +1,6 @@
 #goldenColor {
   background-color: #d4af37;
+
 }
 // ? NavBar
 
@@ -30,5 +31,28 @@
   font-size: x-small;
 }
 
-
-
+// ? Home
+// #home {
+//   margin: 0;
+//   background-color: #d4af37;
+// }
+.homeImg {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 60vh;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0, 0, 0, 0.5)), url("https://static.wixstatic.com/media/027b66_cde0c923527846c2a2f901cce6e2bed5.jpg/v1/fill/w_980,h_653,al_c,q_85,usm_0.66_1.00_0.01/027b66_cde0c923527846c2a2f901cce6e2bed5.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  // align-content: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  color: #d4af37;
+  // font-size: 35px;
+}
+#homeImgSegment {
+  margin:0;
+  padding:0;
+}

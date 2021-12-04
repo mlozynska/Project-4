@@ -11,7 +11,7 @@ const NavBar = () => {
         <Menu secondary id="navBarSegment">
           <Menu.Item  style={{ padding: '0' }} onClick={() => history.push('/')}>
             <Menu.Item  style={{ padding: '0' }}>
-              <Image id="navBarImg" src={'https://www.freeiconspng.com/thumbs/vintage-cars-png/volkswagen-vintage-cars-png-0.png'} style={{ padding: '0 0 0 15px' }}/>
+              <Image id="navBarImg" src={'https://lh3.googleusercontent.com/oTmncSI5olRXn583xK0A_0jjIC5JRF93rWVUjsj8aaxJ3eJOzQ1uNHBOIWEwgesIdRE3ZlafOnQkB2Eh_Ci6XtQ=s0'} style={{ padding: '0 0 0 15px' }}/>
             </Menu.Item>
             <Menu.Item style={{ padding: '5px 0' }}>
               <Header as="h1" style={{ margin: '10px 0 5px 0' }}>VintCars</Header>
