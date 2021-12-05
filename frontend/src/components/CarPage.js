@@ -31,7 +31,8 @@ const CarPage = () => {
           <h5>{car.year}</h5>
           <h5>{car.steering}</h5>
           <Image src = {car.picture}></Image>
-          <h5>{}</h5>
+          <Image src = {car.image_set[1].image}></Image>
+          <h5>{car.review_set[0].text}</h5>
           <h5>{}</h5>
           <Segment>
             <p>{car.services[0].description}</p>

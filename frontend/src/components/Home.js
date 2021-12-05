@@ -35,7 +35,7 @@ const Home = () => {
       </Segment>
       <Segment inverted color="black" style={{ padding: '0 15px 0 15px' }}>
         <Divider horizontal>
-          <Header as='h4' style={{ color: '#7b1113' }}>
+          <Header as='h3' style={{ color: '#7b1113' }}>
             About us
           </Header>
         </Divider>
@@ -48,7 +48,7 @@ const Home = () => {
 
       <Segment inverted color="black" style={{ padding: '0 15px 0 15px' }}>
         <Divider horizontal>
-          <Header as='h4' style={{ color: '#7b1113' }}>
+          <Header as='h3' style={{ color: '#7b1113' }}>
             How it works
           </Header>
         </Divider>
@@ -58,7 +58,7 @@ const Home = () => {
 
       <Segment inverted color="black" style={{ padding: '0 15px 0 15px' }}>
         <Divider horizontal>
-          <Header as='h4' style={{ color: '#7b1113' }}>
+          <Header as='h3' style={{ color: '#7b1113' }}>
             Our Cars
           </Header>
         </Divider>
@@ -85,7 +85,7 @@ const Home = () => {
       </Segment>
       <Segment inverted color="black" style={{ padding: '0 15px 0 15px' }}>
         <Divider horizontal>
-          <Header as='h4' style={{ color: '#7b1113' }}>
+          <Header as='h3' style={{ color: '#7b1113' }}>
             Reviews
           </Header>
         </Divider>

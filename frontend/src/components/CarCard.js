@@ -6,7 +6,9 @@ const CarCard = ({ title, year, picture, passengers, minprice, hourly }) => {
   return (
     <>
       <Card >
-        <Segment inverted color='black'>
+        <Segment inverted color='black'
+          onClick={() => history.push('/cars/:id')}
+        >
           <Header as="h3" textAlign="left" color="white"
           > {title}</Header>
           <Header as="h5" textAlign="left" color="white">
