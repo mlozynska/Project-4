@@ -12,12 +12,11 @@ const CarPage = () => {
     const getData = async () => {
       const { data } = await axios.get(`/api/cars/${id}`)
       setCar(data)
-      
     }
     getData()
     
   }, [id])
-  console.log(car)
+  // console.log(car)
   return (
     <>
       {car ?

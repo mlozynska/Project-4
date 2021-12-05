@@ -13,7 +13,6 @@ const CarIndex = () => {
       setCars(data)
     }
     getdata()
-    // console.log(cars)
   }, [])
 
   return (

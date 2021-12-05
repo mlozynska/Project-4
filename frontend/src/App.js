@@ -1,5 +1,4 @@
 import React from 'react'
-import axios from 'axios'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import Home from './components/Home.js'
 import NavBar from './components/NavBar.js'
@@ -9,13 +8,7 @@ import Footer from './components/Footer.js'
 
 
 function App() {
-  React.useEffect(() => {
-    const getData = async () => {
-      const res = await axios.get('/api/cars') // * <-- replace with your endpoint
-      console.log(res.data)
-    }
-    getData()
-  })
+
 
   return (
     <BrowserRouter>
@@ -29,8 +22,6 @@ function App() {
 
     </BrowserRouter>
   )
-    
-
 }
 
 export default App

@@ -13,11 +13,10 @@ const Review = () => {
       setReviews(data)
     }
     getdata()
-    console.log(reviews)
+    // console.log(reviews)
   }, [ ])
-
+  // console.log(randomReview)
   
-  console.log(randomReview)
   return (
     <>
       {randomReview ?

@@ -1,13 +1,27 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import FindandBook from './FindandBook'
 import { useHistory } from 'react-router-dom'
+import axios from 'axios'
 import { Segment, Header, Button, Divider, Card } from 'semantic-ui-react'
 import Review from './Review'
-// import Carousel from 'react-responsive-carousel/lib/js/components/Carousel/index'
-// import 'react-responsive-carousel/lib/styles/carousel.min.css'
+import Carousel from 'react-responsive-carousel/lib/js/components/Carousel/index'
+import 'react-responsive-carousel/lib/styles/carousel.min.css'
 
 const Home = () => {
   const history = useHistory()
+  const [cars, setCars] = useState([])
+  
+  useEffect(() => {
+    const getdata = async () => {
+      const { data } = await axios.get('/api/cars')
+      console.log(data)
+      setCars(data)
+    }
+    getdata()
+    console.log(cars)
+  }, [ ])
+  
+
   return (
     <Segment id="homeImgSegment" inverted color="black" basic vertical>
       <Segment style={{ margin: '0' }} basic inverted >
@@ -51,23 +65,24 @@ const Home = () => {
       </Segment>
 
 
-      {/* <Container>
+      <Segment basic id="goldenColor" >
         <Carousel
           showThumbs={true}
           infiniteLoop={true}
           autoPlay={true}
-          interval={2500}
+          interval={3500}
           transitionTime={1000}
           autoFocus={true}
           swipeable={true}
-          dynamicHeight={true}
-          animationHandler="fade">
-          {park.images.map(image => (
-            <img src={image} alt={park.title}></img>
-          ))}
-        </Carousel>
-      </Container>  */}
+          // dynamicHeight={true}
+        >
 
+          {cars.map(car => (
+            <img key={cars} src={car.picture} ></img>
+          ))
+          }
+        </Carousel>
+      </Segment>
       <Segment inverted color="black" style={{ padding: '0 15px 0 15px' }}>
         <Divider horizontal>
           <Header as='h4' style={{ color: '#7b1113' }}>
