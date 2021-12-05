@@ -11,8 +11,9 @@
 }
 
 #navInfo {
-  margin: 0;
+  margin: 0 0 0 85px;
   background-color: #d4af37;
+  
 }
 
 #navBarImg {
@@ -32,10 +33,6 @@
 }
 
 // ? Home
-// #home {
-//   margin: 0;
-//   background-color: #d4af37;
-// }
 .homeImg {
   padding: 0;
   margin: 0;
@@ -52,7 +49,27 @@
   color: #d4af37;
   // font-size: 35px;
 }
+
 #homeImgSegment {
   margin:0;
   padding:0;
+}
+
+#homeAbout {
+  margin-top: 0;
+  padding: 0 20px 10px 20px;
+}
+
+#icon {
+margin: 5px 0 0 5px;
+}
+
+#homeh {
+  max-width: 100px;
+  margin: 0;
+}
+
+#findBook {
+  background: '#d4af37';
+  margin-bottom: 0;
 }

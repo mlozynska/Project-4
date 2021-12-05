@@ -4,7 +4,7 @@ import { Segment, Grid, Header, Icon, Image } from 'semantic-ui-react'
 const Footer = () => {
 
   return (
-    <Segment size='' basic id="goldenColor">
+    <Segment basic id="goldenColor" style={{ textAlign: 'justify' }}>
       <Grid columns={3}>
 
         
@@ -30,7 +30,7 @@ const Footer = () => {
           </Grid>
         </Grid.Column>
 
-        <Grid.Column>
+        <Grid.Column style={{ justifyContent: 'center' }}>
           <Image id="navBarImg" src={'https://lh3.googleusercontent.com/oTmncSI5olRXn583xK0A_0jjIC5JRF93rWVUjsj8aaxJ3eJOzQ1uNHBOIWEwgesIdRE3ZlafOnQkB2Eh_Ci6XtQ=s0'} style={{ margin: '20px 0 0 0' }}/>
           <p className="pFooter">Copyright © 2021 M.Lozynska ®</p>
         </Grid.Column>
