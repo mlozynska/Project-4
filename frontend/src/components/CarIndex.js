@@ -13,8 +13,9 @@ const CarIndex = () => {
       setCars(data)
     }
     getdata()
-    console.log(cars)
+    // console.log(cars)
   }, [])
+
   return (
     <Segment inverted color='yellow'>
       <Segment inverted color='black'>

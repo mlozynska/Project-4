@@ -1,7 +1,7 @@
 import React from 'react'
 import { Card, Image } from 'semantic-ui-react'
 
-const FindBook = () => {
+const FindandBook = () => {
 
   return (
     <Card.Group style={{ justifyContent: 'center' }} items={3}>
@@ -69,4 +69,4 @@ const FindBook = () => {
 
   )
 }
-export default FindBook
+export default FindandBook
