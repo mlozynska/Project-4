@@ -3,8 +3,8 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import { useParams } from 'react-router-dom'
 import { Segment, Image, Header, Card, Grid, Form, Input, Button, TextArea } from 'semantic-ui-react'
-// import Carousel from 'react-responsive-carousel/lib/js/components/Carousel/index'
-// import 'react-responsive-carousel/lib/styles/carousel.min.css'
+import Carousel from 'react-responsive-carousel/lib/js/components/Carousel/index'
+import 'react-responsive-carousel/lib/styles/carousel.min.css'
 
 const CarPage = () => {
   const { id } = useParams()
@@ -29,28 +29,24 @@ const CarPage = () => {
           </Header>
           
           <Segment basic id="goldenColor" >
-            {car.image_set.map(image => (
-              <img key={id} src={image} ></img>
-            ))
-            }
-            {/* <Carousel
-              showThumbs={true}
-              infiniteLoop={true}
-              autoPlay={true}
-              interval={3500}
-              transitionTime={1000}
-              autoFocus={true}
-              swipeable={true}
+            <Carousel
+              // showThumbs={true}
+              // infiniteLoop={true}
+              // autoPlay={true}
+              // interval={3500}
+              // transitionTime={1000}
+              // autoFocus={true}
+              // swipeable={true}
               // showThumbs={false}
-              showStatus={false}
-              showIndicators={false}
-              dynamicHeight={true}
+              // showStatus={false}
+              // showIndicators={true}
+              // dynamicHeight={true}
             >
-              {car.image_set.map(image => (
-                <img key={id} src={image} ></img>
-              ))
+              {car.image_set.map(image =>
+                <img key={car.image_set} src={image.image}></img> 
+              )
               }
-            </Carousel> */}
+            </Carousel>
           </Segment>
           
           <Segment style={{ background: '#7b1113' }} >
@@ -168,7 +164,6 @@ const CarPage = () => {
             {car.image_set.map( image => {
               return (
                 <>
-
                   <img  src={image.image}></img>
                 </>
               )
