@@ -38,35 +38,7 @@ const FindandBook = () => {
         </Card.Content>
       </Card>
 
-
-      
-      
     </Card.Group>
-    // <h1>gggggggggghomehYou are only 20 seconds away from booking a dream car. Right here you can find the worlds mostgggggggggghomehYou are only 20 seconds away from booking a dream car. Right here you can find the worlds most extensive collection of unique classic cars and sports cars. Dreams are better in real life!gggggggggghomehYou are only 20 seconds away from booking a dream car. Right here you can find the worlds most extensive collection of unique classic cars and sports cars. Dreams are better in real life! extensive collection of unique classic cars and sports cars. Dreams are better in real life!</h1>
-    // <Segment inverted style={{ padding: '0 35px 0 35px' }}>
-    //   <Grid column={5}>
-    //     <Grid.Column id="findBook" style={{ background: '#d4af37' }}>
-    //       <h5 style={{ margin: '0' }} textAlign='center'>Find your dream Car</h5>
-    //       <Image id="icon" src={'https://lh3.googleusercontent.com/TTDOo8I1YwYyUoilCjLOsWUktXsj9L1PufGt8cSnetUEzyHcCid2oziUZ-O1Zn0U7FxauFNwMEb1RTgdv_plsHY=s0'} size="tiny" style={{ background: '#d4af37' }} />
-    //       <h6 id="homeh">You are only 20 seconds away from booking a dream car. Right here you can find the worlds most extensive collection of unique classic cars and sports cars. Dreams are better in real life!</h6>
-    //     </Grid.Column>
-    //     <Grid.Column>
-
-  //     </Grid.Column>
-  //     <Segment style={{ background: '#d4af37' }}>
-  //       <h5 style={{ margin: '0' }} textAlign='center'>Find your dream Car</h5>
-  //       <Image id="icon" src={'https://lh3.googleusercontent.com/TTDOo8I1YwYyUoilCjLOsWUktXsj9L1PufGt8cSnetUEzyHcCid2oziUZ-O1Zn0U7FxauFNwMEb1RTgdv_plsHY=s0'} size="tiny" style={{ background: '#d4af37' }} />
-  //       <h6 id="homeh">You are only 20 seconds away from booking a dream car. Right here you can find the worlds most extensive collection of unique classic cars and sports cars. Dreams are better in real life!</h6>
-  //     </Segment>
-  //     <Segment></Segment>
-  //     <Segment>
-  //       <h5 style={{ margin: '0' }} textAlign='center'>Find your dream Car</h5>
-  //       <Image id="icon" src={'https://lh3.googleusercontent.com/TTDOo8I1YwYyUoilCjLOsWUktXsj9L1PufGt8cSnetUEzyHcCid2oziUZ-O1Zn0U7FxauFNwMEb1RTgdv_plsHY=s0'} size="tiny" style={{ background: '#d4af37' }} />
-  //       <h6 id="homeh">You are only 20 seconds away from booking a dream car. Right here you can find the worlds most extensive collection of unique classic cars and sports cars. Dreams are better in real life!</h6>
-  //     </Segment>
-  //   </Grid>
-  // </Segment>
-
   )
 }
 export default FindandBook

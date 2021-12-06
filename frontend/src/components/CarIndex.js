@@ -16,7 +16,7 @@ const CarIndex = () => {
   }, [])
 
   return (
-    <Segment inverted color='yellow'>
+    <Segment inverted color='yellow' basic>
       <Segment inverted color='black'>
         <Header>Our Cars</Header>
       </Segment>
