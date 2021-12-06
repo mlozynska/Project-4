@@ -121,7 +121,7 @@ const CarPage = () => {
 
           {/* Form area */}
           <Segment inverted basic>
-            <h5 id="formInfo">Feel free to contact us with the details of your event and we can aim to build you a bespoke quote to suit your exact requirements. We aim to offer the highest form of service and quality with a competitive package that can`t be beaten. </h5>
+            <p id="formInfo">Feel free to contact us with the details of your event and we can aim to build you a bespoke quote to suit your exact requirements. We aim to offer the highest form of service and quality with a competitive package that can`t be beaten. </p>
             <Segment inverted basic>
               <Grid columns={2} style={{ justifyContent: 'space-evenly' }}>
                 <Segment style={{ marginBottom: '0' }} id="goldenColor">
@@ -158,7 +158,7 @@ const CarPage = () => {
 
 
 
-          <Segment>
+          <Segment >
             <h1>REVIEW</h1>
             {car.review_set.map( review => {
               return (
@@ -172,19 +172,6 @@ const CarPage = () => {
               
             })}
           </Segment>
-
-          {/* <Segment>
-            <h1>SERVICES</h1>
-            {car.services.map( service => {
-              return (
-                <>
-                  <p key={service.id}>{service.title}</p>
-                  <p key={id}>{service.description}</p>
-                  <p key={id}>{service.price}</p>
-                </>
-              )
-            })}
-          </Segment> */}
 
 
         </Segment>
