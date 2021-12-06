@@ -67,14 +67,14 @@ const Home = () => {
 
       <Segment basic id="goldenColor" >
         <Carousel
-          // showThumbs={true}
+          showThumbs={true}
           infiniteLoop={true}
           autoPlay={true}
           interval={3500}
           transitionTime={1000}
           autoFocus={true}
           swipeable={true}
-          showThumbs={false}
+          // showThumbs={false}
           showStatus={false}
           showIndicators={false}
           // dynamicHeight={true}
