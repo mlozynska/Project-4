@@ -19,7 +19,13 @@ const CarPage = () => {
     rating: '',
     car: `${id}`,
   })
-    
+  
+  const [errors, setErrors] = useState({
+    name: '',
+    title: '',
+    text: '',
+    rating: '',
+  })
   
 
   useEffect(() => {
@@ -47,7 +53,7 @@ const CarPage = () => {
   
   const handleStars = e => {
     const rating = e.target.attributes.getNamedItem('aria-posinset').value
-    console.log(rating)
+    // console.log(rating)
     const newReview = { ...review, rating }
     setReview(newReview)
   }
@@ -56,11 +62,10 @@ const CarPage = () => {
     event.preventDefault()
     try {
       await axios.post('/api/reviews/', review)
-      // history.push(`/cars/${rev.data.car}`)
-      // console.log(rev.data.car)
       location.reload()
     } catch (err) {
-      console.log(err)
+      console.log(errors)
+      setErrors(err.response.data.errors)
     }
     
   }
@@ -75,7 +80,6 @@ const CarPage = () => {
           
           <Segment basic id="goldenColor" >
             <Carousel
-              // showThumbs={true}
               showThumbs={false}
               infiniteLoop={true}
               autoPlay={true}
@@ -147,6 +151,7 @@ const CarPage = () => {
                       name="name"
                       placeholder="Your name"
                     />
+                    
                     <input
                       onChange={handleChange}
                       name="title"
@@ -175,14 +180,12 @@ const CarPage = () => {
                       // style={{ backgroundColor: '#d4af37' }}
                       inverted
                     />
-                    {/* <Button
-                      autoFocus
-                      onClick={getAverage}
-                      content="Average rating"
-                      labelPosition="left"
-                      // style={{ backgroundColor: '#d4af37' }}
-                      inverted
-                    /> */}
+                    {/* {errors.name && errors.text && errors.title && errors.rating && (
+                      <Header sub color="red">
+                      Please fill in the required information
+                      </Header>
+                    )} */}
+
                   </Form>
 
                 </Comment.Content>

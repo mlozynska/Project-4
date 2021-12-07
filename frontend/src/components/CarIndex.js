@@ -16,28 +16,29 @@ const CarIndex = () => {
   }, [])
 
   return (
-    <Segment inverted color='yellow' basic>
-      <Segment inverted color='black'>
-        <Header>Our Cars</Header>
+    <Segment  basic inverted style={{ margin: '0 0' }}>
+      <Segment  id="goldenColor">
+        <Header as="h1" style={{ color: '#7b1113' }} textAlign="center">FIND YOUR DREAM CAR</Header>
       </Segment>
       
-      <Segment  inverted color='black'>
-        <Grid>
-          {cars.map(car => {
-            return (
-              <CarCard
-                key={car.id}
-                title={car.title}
-                year={car.year}
-                minprice={car.minprice}
-                hourly={car.hourly}
-                passengers={car.passengers}
-                picture={car.picture}
-              />
-            )
-          })}
-        </Grid>
-        
+      <Segment  id="redColor" >
+        <Segment  id="redColor" basic>
+          <Grid>
+            {cars.map(car => {
+              return (
+                <CarCard
+                  key={car.id}
+                  title={car.title}
+                  year={car.year}
+                  minprice={car.minprice}
+                  hourly={car.hourly}
+                  passengers={car.passengers}
+                  picture={car.picture}
+                />
+              )
+            })}
+          </Grid>
+        </Segment>
       </Segment>
       
       

@@ -5,7 +5,7 @@ const CarCard = ({ title, year, picture, passengers, minprice, hourly }) => {
 
   return (
     <>
-      <Card >
+      <Card style={{ margin: '0 0' }}>
         <Segment inverted color='black'
           onClick={() => history.push('/cars/:id')}
         >
