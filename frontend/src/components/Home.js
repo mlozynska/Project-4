@@ -14,11 +14,11 @@ const Home = () => {
   useEffect(() => {
     const getdata = async () => {
       const { data } = await axios.get('/api/cars')
-      console.log(data)
+      // console.log(data)
       setCars(data)
     }
     getdata()
-    console.log(cars)
+    // console.log(cars)
   }, [ ])
   
 

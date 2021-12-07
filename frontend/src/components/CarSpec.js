@@ -37,7 +37,7 @@ const CarSpec = ({ car }) => {
 
         <Card id="infoBox">
           <Card.Content style={{ background: 'black' }} textAlign="center">
-            <Image id="money" src={'https://lh3.googleusercontent.com/proxy/-1zOfkCoBxVWdSx-YU6mBVFXkBW_ErbDxHWNALQy8YpfrnIf6xMS912j-jge1GXC6dXnFpHePTZXyZCCWIh7ykbZcapzZoGU-eauWD8puB9FqxaVeaoR4UlNtuQl35lw1ny29i2SY-U'} />
+            <Image id="money" src={'https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX11522172.jpg'} />
             <h6 id="h6CarSpec" textalign='center'>Min.price: £ {car.minprice}</h6>
             <h6 id="h6CarSpec" textalign='center'>Hourly: £ {car.hourly}</h6>
           </Card.Content>

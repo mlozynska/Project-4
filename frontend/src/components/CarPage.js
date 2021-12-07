@@ -19,7 +19,8 @@ const CarPage = () => {
     rating: '',
     car: `${id}`,
   })
-  // const [newReview, setNewReview] = useState(false)
+    
+  
 
   useEffect(() => {
     const getData = async () => {
@@ -29,8 +30,15 @@ const CarPage = () => {
     }
     getData()
     
-  }, [id])
+  }, [id, review])
   // console.log(car)
+
+  // const getAverage = () => {
+  //   const ratings = car.review_set.rating
+  //   console.log(ratings)
+  //   // const aveRating = ratings.reduce((a, b) => a + b, 0)
+  //   // return aveRating / ratings.length
+  // }
 
   const handleChange = (event) => {
     const newReview = { ...review, [event.target.name]: event.target.value }
@@ -45,14 +53,16 @@ const CarPage = () => {
   }
 
   const handleSubmit = async (event) => {
-    console.log(review)
     event.preventDefault()
     try {
       await axios.post('/api/reviews/', review)
+      // history.push(`/cars/${rev.data.car}`)
+      // console.log(rev.data.car)
+      location.reload()
     } catch (err) {
       console.log(err)
     }
-
+    
   }
 
   return (
@@ -99,19 +109,23 @@ const CarPage = () => {
           <EnqForm />
 
           <Segment id="goldenColor" basic>
-            <Comment.Group>
-              <Header>Reviews</Header>
-              <Comment>
+
+            <Divider horizontal>
+              <Header as='h3' style={{ color: '#7b1113' }}>
+                  Reviews
+              </Header>  
+            </Divider>
+
+            <Segment style={{ background: '#7b1113' }}>
+              <Comment id="groupContent" >
                 <Comment.Content>
                   {car.review_set.length ? (
                     car.review_set.map( review => {
                       return (
                         <Segment key={car.review_set.id}>
                           <h5>{review.name}</h5>
-                          {/* <h4>{review.title}</h4> */}
-                          {/* <Comment.Author></Comment.Author> */}
                           <Comment.Metadata>{review.title}</Comment.Metadata>
-                          
+                            
                           <Comment.Text>{review.text}</Comment.Text>
                           <Rating
                             defaultRating={review.rating}
@@ -122,8 +136,8 @@ const CarPage = () => {
                       )
                     })
                   ) : (
-                    <Header textAlign="center" as="h2">
-                      Be first to comment and rate this park!
+                    <Header textAlign="center" as="h2" style={{ color: '#d4af37' }}>
+                        Be first to comment and rate this park!
                     </Header>
                   )}
 
@@ -143,27 +157,39 @@ const CarPage = () => {
                       name="text"
                       placeholder="Your review..."
                     />
-                    <p style={{ color: 'black' }}>
-                      Please add a rating to submit your comment
-                    </p>
+                    
                     <Rating
                       onClick={handleStars}
                       icon="star"
                       maxRating={5}
                       name="rating"
                     />
-                    
+                    <p style={{ color: '#d4af37' }}>
+                        Please add a rating to submit your comment
+                    </p>
                     <Button
                       autoFocus
                       onClick={handleSubmit}
                       content="Add Review"
                       labelPosition="left"
+                      // style={{ backgroundColor: '#d4af37' }}
+                      inverted
                     />
+                    {/* <Button
+                      autoFocus
+                      onClick={getAverage}
+                      content="Average rating"
+                      labelPosition="left"
+                      // style={{ backgroundColor: '#d4af37' }}
+                      inverted
+                    /> */}
                   </Form>
 
                 </Comment.Content>
               </Comment>
-            </Comment.Group>
+            </Segment>
+            
+            
           </Segment>
 
         </Segment>
