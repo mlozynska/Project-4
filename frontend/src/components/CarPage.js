@@ -5,7 +5,7 @@ import { useParams } from 'react-router-dom'
 import CarSpec from './CarSpec'
 import EnqForm from './EnqForm'
 import Services from './Services'
-import { Segment,  Header, Divider, Comment, Rating, Form, Button } from 'semantic-ui-react'
+import { Segment,  Header, Divider, Comment, Rating, Form, Button, Modal } from 'semantic-ui-react'
 import Carousel from 'react-responsive-carousel/lib/js/components/Carousel/index'
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
 
@@ -27,6 +27,7 @@ const CarPage = () => {
     rating: '',
   })
   
+  const [open, setOpen] = useState(false)
 
   useEffect(() => {
     const getData = async () => {
@@ -37,35 +38,45 @@ const CarPage = () => {
     getData()
     
   }, [id, review])
-  // console.log(car)
+  // console.log(car.id)
 
-  // const getAverage = () => {
-  //   const ratings = car.review_set.rating
-  //   console.log(ratings)
-  //   // const aveRating = ratings.reduce((a, b) => a + b, 0)
-  //   // return aveRating / ratings.length
-  // }
+  useEffect(() => {
+    if (review.name) return
+    if (review.title) return
+    if (review.text) return
+    
+    window.scrollTo(0, 0)
 
+  },[])
+  
   const handleChange = (event) => {
     const newReview = { ...review, [event.target.name]: event.target.value }
+    const newErrors = { ...errors, [event.target.name]: '' }
     setReview(newReview)
+    setErrors(newErrors)
   }
   
   const handleStars = e => {
     const rating = e.target.attributes.getNamedItem('aria-posinset').value
-    // console.log(rating)
     const newReview = { ...review, rating }
     setReview(newReview)
   }
 
   const handleSubmit = async (event) => {
     event.preventDefault()
+    if (!review.name || !review.title || !review.text || !review.rating) {
+      const errorCopy = { ...errors }
+      setErrors(errorCopy)
+      console.log(errors)
+      return
+    }
     try {
       await axios.post('/api/reviews/', review)
       location.reload()
+      // history.push(`/cars/${id}`)
+
     } catch (err) {
-      console.log(errors)
-      setErrors(err.response.data.errors)
+      setErrors(err.response.data)
     }
     
   }
@@ -150,51 +161,54 @@ const CarPage = () => {
                       onChange={handleChange}
                       name="name"
                       placeholder="Your name"
+                      required
                     />
-                    
                     <input
                       onChange={handleChange}
                       name="title"
                       placeholder="Title"
+                      required
                     />
                     <Form.TextArea
                       onChange={handleChange}
                       name="text"
                       placeholder="Your review..."
+                      required
                     />
                     
+                    <p style={{ color: '#d4af37' }}>
+                        Please add a rating to submit your comment
+                    </p>
                     <Rating
                       onClick={handleStars}
                       icon="star"
                       maxRating={5}
                       name="rating"
+                      required
                     />
-                    <p style={{ color: '#d4af37' }}>
-                        Please add a rating to submit your comment
-                    </p>
-                    <Button
-                      autoFocus
-                      onClick={handleSubmit}
-                      content="Add Review"
-                      labelPosition="left"
-                      // style={{ backgroundColor: '#d4af37' }}
-                      inverted
-                    />
-                    {/* {errors.name && errors.text && errors.title && errors.rating && (
-                      <Header sub color="red">
-                      Please fill in the required information
-                      </Header>
-                    )} */}
-
+                    
+                    <Segment id="redColor" style={{ padding: '0' }} basic>
+                      <Modal
+                        header="Please, fill in all required fields"
+                        onClose={() => setOpen(false)}
+                        onOpen={() => setOpen(true)}
+                        open={open}
+                        size='tiny'
+                        trigger={
+                          <Button
+                            autoFocus
+                            onClick={handleSubmit}
+                            content="Add Review"
+                            labelPosition="left"
+                          />
+                        }
+                      />
+                    </Segment>
                   </Form>
-
                 </Comment.Content>
               </Comment>
             </Segment>
-            
-            
           </Segment>
-
         </Segment>
         :
         <h1> Loading</h1>

@@ -15,10 +15,14 @@ const CarIndex = () => {
     getdata()
   }, [])
 
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  })
+
   return (
     <Segment  basic inverted style={{ margin: '0 0' }}>
       <Segment  id="goldenColor">
-        <Header as="h1" style={{ color: '#7b1113' }} textAlign="center">FIND YOUR DREAM CAR</Header>
+        <Header as="h1" style={{ color: '#7b1113' }} textAlign="left">FIND YOUR DREAM CAR</Header>
       </Segment>
       
       <Segment  id="redColor" >

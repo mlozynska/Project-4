@@ -21,6 +21,13 @@ const Home = () => {
     // console.log(cars)
   }, [ ])
   
+  // useEffect(() => {
+  //   window.scrollTo({
+  //     top: 0,
+  //     left: 0,
+  //     behavior: 'smooth',
+  //   })
+  // }, [cars])
 
   return (
     <Segment id="homeImgSegment" inverted color="black" basic vertical>

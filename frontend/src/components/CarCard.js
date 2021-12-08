@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Card, Image, Header, Segment, Button, Grid } from 'semantic-ui-react'
 import { Link, useHistory } from 'react-router-dom'
 
 const CarCard = ({ id, title, year, picture, passengers, minprice, hourly }) => {
   const history = useHistory()
 
+  
 
   return (
     <Link to={`/cars/${id}`}>
