@@ -1,12 +1,10 @@
 #goldenColor {
   background-color: #d4af37;
-
 }
 #redColor {
   background-color: #7b1113;
 }
 // ? NavBar
-
 .pNavBar {
   color:black;
   font-size: smaller;
@@ -34,13 +32,6 @@
 .pFooter {
   font-size: x-small;
 }
-
-// #footerSegment {
-//   text-align: justify;
-//   background-color: #d4af37;
-//   margin-top: 0;
-//   padding-top: 0;
-// }
 
 // ? Home
 .homeImg {
@@ -106,15 +97,43 @@ padding: 0;
   text-align: justify;
   padding: 10px 36px;
 }
+
 #serviceBox {
   max-width: 200px;
 }
+
 #h6CarSpec {
 margin: 0;
 padding:0;
 color: #d4af37; 
 }
+
 #groupContent {
   display: flex;
   justify-content: center;
+}
+
+//? CarCard
+#carCard {
+  margin: 15px 0;
+  padding: 15px 0;
+  max-width: 260px;
+  max-height: 475px;
+  background-color: black;
+}
+#iconCard {
+  margin: 10px 0 0 5px;
+  height: 25px;
+  width: 25px;
+}
+
+#headerPassengers {
+  color: #d4af37;
+}
+
+#showMore {
+  background-color: #d4af37;
+  text-align: center;
+  margin-top: 0;
+  padding: 7px 0;
 }
