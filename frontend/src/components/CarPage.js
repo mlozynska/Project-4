@@ -47,7 +47,7 @@ const CarPage = () => {
     
     window.scrollTo(0, 0)
 
-  },[])
+  })
   
   const handleChange = (event) => {
     const newReview = { ...review, [event.target.name]: event.target.value }
@@ -152,7 +152,7 @@ const CarPage = () => {
                     })
                   ) : (
                     <Header textAlign="center" as="h2" style={{ color: '#d4af37' }}>
-                        Be first to comment and rate this park!
+                        Be first to comment and rate this Car!
                     </Header>
                   )}
 
@@ -208,6 +208,7 @@ const CarPage = () => {
                 </Comment.Content>
               </Comment>
             </Segment>
+            
           </Segment>
         </Segment>
         :
