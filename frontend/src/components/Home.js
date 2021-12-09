@@ -14,27 +14,17 @@ const Home = () => {
   useEffect(() => {
     const getdata = async () => {
       const { data } = await axios.get('/api/cars')
-      // console.log(data)
       setCars(data)
     }
     getdata()
-    // console.log(cars)
   }, [ ])
-  
-  // useEffect(() => {
-  //   window.scrollTo({
-  //     top: 0,
-  //     left: 0,
-  //     behavior: 'smooth',
-  //   })
-  // }, [cars])
+
 
   return (
     <Segment id="homeImgSegment" inverted color="black" basic vertical>
       <Segment style={{ margin: '0' }} basic inverted >
         <div className="homeImg">
           <Header as="h1" style={{ color: 'white' }}>Welcome to Vintage Car hire!</Header>
-          {/* <Header as="h1" style={{ color: 'white' }}>Find & book your car!</Header> */}
           <Segment basic>
             <Button inverted size="small" style={{ width: '160px' }} position='center' onClick={() => history.push('/cars')}>Find & book your car</Button>
           </Segment>
@@ -81,10 +71,8 @@ const Home = () => {
           transitionTime={1000}
           autoFocus={true}
           swipeable={true}
-          // showThumbs={false}
           showStatus={false}
           showIndicators={false}
-          // dynamicHeight={true}
         >
 
           {cars.map(car => (
@@ -110,8 +98,5 @@ const Home = () => {
       </Segment>
     </Segment>
   )
-  
-  
-
 }
 export default Home

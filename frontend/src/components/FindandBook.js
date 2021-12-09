@@ -7,7 +7,7 @@ const FindandBook = () => {
     <Card.Group style={{ justifyContent: 'center' }} items={3}>
       <Card >
         <Card.Content style={{ background: '#d4af37' }} textAlign="right">
-          <h3 textAlign='center' style={{ color: 'black' }}>FIND YOUR DREAM CAR</h3>
+          <h4 textAlign='center' style={{ color: 'black' }}>FIND YOUR DREAM CAR</h4>
           <Image id="icon" src={'https://lh3.googleusercontent.com/TTDOo8I1YwYyUoilCjLOsWUktXsj9L1PufGt8cSnetUEzyHcCid2oziUZ-O1Zn0U7FxauFNwMEb1RTgdv_plsHY=s0'} size="mini" style={{ background: '#d4af37' }} />
           <Image id="icon" src={'https://icon-library.com/images/right-arrow-icon-png/right-arrow-icon-png-19.jpg'} size="mini" style={{ background: '#d4af37' }} />
           <Card.Description>
