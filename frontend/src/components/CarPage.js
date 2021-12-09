@@ -9,6 +9,7 @@ import { Segment,  Header, Divider, Comment, Rating, Form, Button, Modal } from 
 import Carousel from 'react-responsive-carousel/lib/js/components/Carousel/index'
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
 
+
 const CarPage = () => {
   const { id } = useParams()
   const [car, setCar] = useState(null)
@@ -100,7 +101,7 @@ const CarPage = () => {
               swipeable={true}
               showStatus={false}>
               {car.image_set.map(image =>
-                <img key={image.id} src={image.image}></img> 
+                <img key={image.id} src={image.image} style={{ height: '500px' }}></img> 
               )}
 
             </Carousel>
@@ -208,11 +209,12 @@ const CarPage = () => {
                 </Comment.Content>
               </Comment>
             </Segment>
+
             
           </Segment>
         </Segment>
         :
-        <h1> Loading</h1>
+        <h4> Loading</h4>
       }
     </Segment>
   )

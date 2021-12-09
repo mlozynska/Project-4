@@ -1257,6 +1257,13 @@
     "@babel/runtime" "^7.10.4"
     react-is "^16.6.3"
 
+"@formspark/use-formspark@^0.1.38":
+  version "0.1.38"
+  resolved "https://registry.yarnpkg.com/@formspark/use-formspark/-/use-formspark-0.1.38.tgz#d8d48ac9ba794fa3e7087d705975c90f535a6467"
+  integrity sha512-3TrC3QPRlEFgWQnfSJgCXZFWSKVtf6rslcTZ0L1mHOj7uKjDpQNqAC936nH6SzJXKszLTt0h9QgFRi70+wkFbg==
+  dependencies:
+    whatwg-fetch "^3.6.2"
+
 "@gar/promisify@^1.0.1":
   version "1.1.2"
   resolved "https://registry.npmjs.org/@gar/promisify/-/promisify-1.1.2.tgz"
@@ -11206,7 +11213,7 @@ whatwg-encoding@^1.0.5:
   dependencies:
     iconv-lite "0.4.24"
 
-whatwg-fetch@^3.4.1:
+whatwg-fetch@^3.4.1, whatwg-fetch@^3.6.2:
   version "3.6.2"
   resolved "https://registry.npmjs.org/whatwg-fetch/-/whatwg-fetch-3.6.2.tgz"
   integrity sha512-bJlen0FcuU/0EMLrdbJ7zOnW6ITZLrZMIarMUVmdKtsGvZna8vxKYaexICWPfZ8qwf9fzNq+UEIZrnSaApt6RA==
