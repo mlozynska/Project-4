@@ -75,7 +75,7 @@ const CarPage = () => {
     }
     try {
       if (review.name || review.title || review.text || review.rating) {
-        setMessage('Thanks, someone will be in touch shortly!')
+        setMessage('Thank you very much for the review!')
         await axios.post('/api/reviews/', review)
         location.reload()
       }
