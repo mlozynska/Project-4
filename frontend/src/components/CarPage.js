@@ -27,7 +27,8 @@ const CarPage = () => {
     text: '',
     rating: '',
   })
-  
+
+  const [message, setMessage] = useState()
   const [open, setOpen] = useState(false)
 
   useEffect(() => {
@@ -68,13 +69,16 @@ const CarPage = () => {
     if (!review.name || !review.title || !review.text || !review.rating) {
       const errorCopy = { ...errors }
       setErrors(errorCopy)
+      setMessage('Please, fill in all required fields')
       console.log(errors)
       return
     }
     try {
-      await axios.post('/api/reviews/', review)
-      location.reload()
-      // history.push(`/cars/${id}`)
+      if (review.name || review.title || review.text || review.rating) {
+        setMessage('Thanks, someone will be in touch shortly!')
+        await axios.post('/api/reviews/', review)
+        location.reload()
+      }
 
     } catch (err) {
       setErrors(err.response.data)
@@ -90,7 +94,7 @@ const CarPage = () => {
             {car.title}
           </Header>
           
-          <Segment basic id="goldenColor" >
+          <Segment basic id="redColor" >
             <Carousel
               showThumbs={false}
               infiniteLoop={true}
@@ -101,7 +105,7 @@ const CarPage = () => {
               swipeable={true}
               showStatus={false}>
               {car.image_set.map(image =>
-                <img key={image.id} src={image.image} style={{ height: '500px' }}></img> 
+                <img key={image.id} src={image.image} ></img> 
               )}
 
             </Carousel>
@@ -203,7 +207,9 @@ const CarPage = () => {
                             labelPosition="left"
                           />
                         }
-                      />
+                      >
+                        {message && <Header>{message}</Header>}
+                      </Modal>
                     </Segment>
                   </Form>
                 </Comment.Content>

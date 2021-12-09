@@ -1,13 +1,13 @@
 import React, { useState } from 'react'
 import axios from 'axios'
 import { useHistory } from 'react-router-dom'
-import { Segment, Grid, Header, Input, TextArea, Button, Form } from 'semantic-ui-react'
+import { Segment, Grid, Header, Input, TextArea, Button, Form, Modal } from 'semantic-ui-react'
+import ReCAPTCHA from 'react-google-recaptcha'
 
 const EnqForm = () => {
   const formId = 'ij6FemlU'
   const formsparkUrl = `https://submit-form.com/${formId}`
   const history = useHistory()
-
   const [form, setForm] = useState({
     name: '',
     email: '',
@@ -24,38 +24,43 @@ const EnqForm = () => {
     message: '',
   })
 
+  const [message, setMessage] = useState()
+  const [open, setOpen] = useState(false)
+
+  const onChange = (value) => {
+    return value
+  } 
+
   const handleChange = (event) => {
     const newForm = { ...form, [event.target.name]: event.target.value }
     const newErrors = { ...errors, [event.target.name]: '' }
-    console.log(form)
     setForm(newForm)
     setErrors(newErrors)
   }
 
-  // console.log(form)
-  
   const handleSubmit = async (event) => {
     event.preventDefault()
+    if (!form.name || !form.title || !form.email || !form.message || !form.phone) {
+      const errorCopy = { ...errors }
+      setErrors(errorCopy)
+      setMessage('Please, fill in all required fields')
+      return
+    }
     const payload = {
       ...form,
-      // message: 'Test formspark submittion',
     }
+
     try {
-      if (!form.name || !form.title || !form.text || !form.message || !form.phone) {
-        const errorCopy = { ...errors }
-        setErrors(errorCopy)
-        console.log(errors)
-        return
+      if (form.name && form.title && form.email && form.message && form.phone) {
+        setMessage('Thanks, someone will be in touch shortly!')
+        await axios.post(formsparkUrl, payload)
+        history.push('/cars')
       }
-      await axios.post(formsparkUrl, payload)
-      // alert('Form submitted')
-      console.log('Form submitted')
-      history.push('/cars')
     } catch (err) {
       setErrors(err.response.data)
     }
-    
   }
+
 
   return (
     <Segment inverted basic>
@@ -67,13 +72,32 @@ const EnqForm = () => {
               <Header as='h2' style={{ color: '#7b1113' }} textAlign="center">
                   Enquire Here
               </Header>
-              <Form.Field control={Input} placeholder='Your full name: ' onChange={handleChange} name="name"/>
-              <Form.Input control={Input} placeholder='joe@schmoe.com' onChange={handleChange} name="email"/>
-              <Form.Field control={Input} placeholder='Your phone number: ' onChange={handleChange} name="phone"/>
-              <Form.Field control={Input} placeholder='Car-Title: ' onChange={handleChange} name="title"/>
-              <Form.Field control={TextArea} placeholder='Your message... ' onChange={handleChange} name="message"/>
-              <Button  style={{ background: '#7b1113' }} onClick={handleSubmit}
-              >Submit</Button>
+              <Form.Field control={Input} placeholder='Your full name: ' onChange={handleChange} name="name" required/>
+              <Form.Input control={Input} placeholder='joe@schmoe.com' onChange={handleChange} name="email" required />
+              <Form.Field control={Input} placeholder='Your phone number: ' onChange={handleChange} name="phone" required/>
+              <Form.Field control={Input} placeholder='Car-Title: ' onChange={handleChange} name="title" required />
+              <Form.Field control={TextArea} placeholder='Your message... ' onChange={handleChange} name="message" required/>
+
+              <ReCAPTCHA
+                sitekey='6LdteI4dAAAAAIOgrqR4wNL6jpcnu_IwwEtLpPlm'
+                onChange={onChange} />
+      
+              <Modal
+                onClose={() => setOpen(false)}
+                onOpen={() => setOpen(true)}
+                open={open}
+                size='tiny'
+                trigger={
+                  <Button 
+                    style={{ background: '#7b1113' }} 
+                    onClick={handleSubmit} 
+                    content={'Submit'}>
+                  </Button>
+                }
+              >
+                {message && <Header>{message}</Header>}
+              </Modal>
+              
             </Form>
           </Segment>
           <Segment  id="goldenColor" style={{ marginTop: '0' }}>

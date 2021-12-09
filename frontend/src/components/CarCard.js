@@ -24,10 +24,10 @@ const CarCard = ({ id, title, year, picture, passengers, minprice }) => {
               <div>
                 <Image id="iconCard" src={'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeAXI2o_OrKfgn80JFKjbpbvkUMabKtllUwA&usqp=CAU'} />
               </div>
-              <p as="h4" textAlign="left" id="headerPassengers" style={{ padding: '12px 0' }}>{passengers}</p>  
+              <p as="h4" id="headerPassengers" style={{ padding: '12px 0' }}>{passengers}</p>  
             </Grid>
             <Grid.Column>
-              <Header as="h5" textAlign="center" color="yellow" >From: £ {minprice}</Header>
+              <Header as="h5" color="yellow" >From: £ {minprice}</Header>
             </Grid.Column>
           </Grid>
 
@@ -38,7 +38,7 @@ const CarCard = ({ id, title, year, picture, passengers, minprice }) => {
             onClick={() => history.push(`/cars/${id}`)}
             autoFocus
             content="Show more"
-            labelPosition="center"
+            labelPosition="right"
             inverted
             style={{ padding: '0' }}
           />  
