@@ -1,29 +1,62 @@
 [
 {
   "model": "services.service",
-  "pk": 1,
+  "pk": 4,
   "fields": {
-    "title": "Wedding decoration",
-    "description": "Wedding decorations",
-    "price": "250.00"
+    "title": "Wedding Car decoration",
+    "description": "With the range of wedding car decorations available you can instantly transform any car or vehicle into the wedding car of your dreams. If retro chic is your thing, wedding car cans are the ideal addition to your wedding car. Available in red or silver, the cans have space for you to personalise them with the happy couple’s names, the date of the ceremony or anything else that meets your fancy.",
+    "price": "250.00",
+    "picture": "https://www.stoklasa-eu.com/img/statickestranky/clanky/2021/2193_zdobeni_svatebniho_auta/srdce.jpg"
   }
 },
 {
   "model": "services.service",
-  "pk": 2,
+  "pk": 5,
   "fields": {
-    "title": "Flowers",
-    "description": "Beautiful flowers.",
-    "price": "70.00"
+    "title": "Beautiful Flower Bouquet",
+    "description": "The joy and happiness that comes from sending and receiving flowers is made even more complete when each bloom is absolutely perfect and wonderfully fresh. The finest quality freshly-cut blooms, each carefully selected directly from flower farms, hand-arranged by our expert florists, lovingly presented, and safely delivered in perfect condition .",
+    "price": "70.00",
+    "picture": "https://media.timeout.com/images/103768312/image.jpg"
   }
 },
 {
   "model": "services.service",
-  "pk": 3,
+  "pk": 6,
   "fields": {
-    "title": "Driver",
-    "description": "Professional",
-    "price": "300.00"
+    "title": "Professional Chauffeur",
+    "description": "Our chauffeurs are the most important part of our business. We spend more time acquiring the very best chauffeurs because our clients deserve and expect excellence. Experienced and refined in the art of chauffeuring, these ladies and gentlemen are the very finest in their field.",
+    "price": "300.00",
+    "picture": "https://www.mmlimo.com/wp-content/uploads/2018/08/shutterstock_311695286.jpg"
+  }
+},
+{
+  "model": "services.service",
+  "pk": 7,
+  "fields": {
+    "title": "The Classic Afternoon Tea Picnic",
+    "description": "The idea of combining a drive in one of our classic cars with a wonderful freshly prepared on the day picnic from 'The Little Picnic Company' came so naturally to us, we decided to share it with you! Picnics will be presented in an eco friendly disposable box which also contains quality sustainable wooden plates, cutlery and linen napkins.",
+    "price": "350.00",
+    "picture": "https://cdn6.dissolve.com/p/D1062_43_740/D1062_43_740_1200.jpg"
+  }
+},
+{
+  "model": "services.service",
+  "pk": 8,
+  "fields": {
+    "title": "Bottle of Champagne with Strawberries",
+    "description": "Champagne is synonymous with celebrations. From 18th birthday parties through to golden anniversaries, our happy milestones are usually accompanied by a bottle of fizz. “Champagne is one of the elegant extras in life,” said Charles Dickens.",
+    "price": "70.00",
+    "picture": "https://253qv1sx4ey389p9wtpp9sj0-wpengine.netdna-ssl.com/wp-content/uploads/2020/12/half-bottle-sparkling.jpg"
+  }
+},
+{
+  "model": "services.service",
+  "pk": 9,
+  "fields": {
+    "title": "Luxury Selection of Chocolates",
+    "description": "Chocolate is the only food that melts at body temperature, hence our name. You can only appreciate chocolate if you let it melt slowly in your mouth – so we encourage you to taste the best chocolate and let it linger in your mouth in a seductive way.",
+    "price": "50.00",
+    "picture": "https://i2-prod.liverpoolecho.co.uk/incoming/article19432730.ece/ALTERNATES/s615/0_Exquisite-Artisan-Collection-scaled-1-1.jpg"
   }
 }
 ]
