@@ -8,7 +8,7 @@ const Review = () => {
   const randomReview = reviews[Math.floor(Math.random() * reviews.length)]
   useEffect(() => {
     const getdata = async () => {
-      const { data } = await axios.get('/api/reviews')
+      const { data } = await axios.get('/api/reviews/')
       // console.log(data)
       setReviews(data)
     }

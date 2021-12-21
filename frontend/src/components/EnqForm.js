@@ -6,7 +6,7 @@ import ReCAPTCHA from 'react-google-recaptcha'
 
 const EnqForm = () => {
   const formId = 'ij6FemlU'
-  const formsparkUrl = `https://submit-form.com/${formId}`
+  const formsparkUrl = `https://submit-form.com/${formId}/`
   const history = useHistory()
   const [form, setForm] = useState({
     name: '',
@@ -54,7 +54,7 @@ const EnqForm = () => {
       if (form.name && form.title && form.email && form.message && form.phone) {
         setMessage('Thanks, someone will be in touch shortly!')
         await axios.post(formsparkUrl, payload)
-        history.push('/cars')
+        history.push('/cars/')
       }
     } catch (err) {
       setErrors(err.response.data)

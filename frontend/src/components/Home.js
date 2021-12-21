@@ -13,7 +13,7 @@ const Home = () => {
   
   useEffect(() => {
     const getdata = async () => {
-      const { data } = await axios.get('/api/cars')
+      const { data } = await axios.get('/api/cars/')
       setCars(data)
     }
     getdata()
@@ -26,7 +26,7 @@ const Home = () => {
         <div className="homeImg">
           <Header as="h1" style={{ color: 'white' }}>Welcome to Vintage Car hire!</Header>
           <Segment basic>
-            <Button inverted size="small" style={{ width: '160px' }} position='center' onClick={() => history.push('/cars')}>Find & book your car</Button>
+            <Button inverted size="small" style={{ width: '160px' }} position='center' onClick={() => history.push('/cars/')}>Find & book your car</Button>
           </Segment>
         </div>
       </Segment>

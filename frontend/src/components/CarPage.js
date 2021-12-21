@@ -33,7 +33,7 @@ const CarPage = () => {
 
   useEffect(() => {
     const getData = async () => {
-      const { data } = await axios.get(`/api/cars/${id}`)
+      const { data } = await axios.get(`/api/cars/${id}/`)
       setCar(data)
       
     }

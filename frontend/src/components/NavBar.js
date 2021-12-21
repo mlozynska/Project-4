@@ -35,7 +35,7 @@ const NavBar = () => {
               </Grid.Column>
             </Menu.Item>
 
-            <Menu.Item onClick={() => history.push('/cars')} style={{ margin: '17px 0 0 7em' }}>
+            <Menu.Item onClick={() => history.push('/cars/')} style={{ margin: '17px 0 0 7em' }}>
               <Header as="h1" style={{ color: '#7b1113' }}>Our Cars</Header>
             </Menu.Item>
           

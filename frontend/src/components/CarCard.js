@@ -8,7 +8,7 @@ const CarCard = ({ id, title, year, picture, passengers, minprice }) => {
   
 
   return (
-    <Link to={`/cars/${id}`}>
+    <Link to={`/cars/${id}/`}>
       <Card id="carCard">
         <Segment style={{ background: '#d4af37' }}>
           <Header as="h3" textAlign="center" style={{ margin: '0' }}> {title}</Header>
@@ -35,7 +35,7 @@ const CarCard = ({ id, title, year, picture, passengers, minprice }) => {
         <Segment  basic id="showMore">
           
           <Button
-            onClick={() => history.push(`/cars/${id}`)}
+            onClick={() => history.push(`/cars/${id}/`)}
             autoFocus
             content="Show more"
             labelPosition="right"

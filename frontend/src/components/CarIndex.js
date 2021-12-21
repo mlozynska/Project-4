@@ -9,7 +9,7 @@ const CarIndex = () => {
 
   useEffect(() => {
     const getdata = async () => {
-      const { data } = await axios.get('/api/cars')
+      const { data } = await axios.get('/api/cars/')
       setCars(data)
     }
     getdata()
