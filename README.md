@@ -1,6 +1,6 @@
 # Project-4 VintCars
 
-![](/assetes/images.Home.png)
+![](/assets/images.Home.png)
 
 Deployed with Heroku [here](https://vintcars.herokuapp.com/)
 
