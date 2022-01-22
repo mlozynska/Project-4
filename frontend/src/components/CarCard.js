@@ -29,8 +29,8 @@ const CarCard = ({ id, title, year, picture, passengers, minprice }) => {
             <Grid.Column>
               <Header as="h5" color="yellow" >From: £ {minprice}</Header>
             </Grid.Column>
-          </Grid>
-
+          </Grid>x
+co
         </Card.Content>
         <Segment  basic id="showMore">
           

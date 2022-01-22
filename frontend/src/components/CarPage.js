@@ -5,10 +5,18 @@ import { useParams } from 'react-router-dom'
 import CarSpec from './CarSpec'
 import EnqForm from './EnqForm'
 import Services from './Services'
-import { Segment,  Header, Divider, Comment, Rating, Form, Button, Modal } from 'semantic-ui-react'
+import {
+  Segment,
+  Header,
+  Divider,
+  Comment,
+  Rating,
+  Form,
+  Button,
+  Modal
+} from 'semantic-ui-react'
 import Carousel from 'react-responsive-carousel/lib/js/components/Carousel/index'
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
-
 
 const CarPage = () => {
   const { id } = useParams()
@@ -18,14 +26,14 @@ const CarPage = () => {
     title: '',
     text: '',
     rating: '',
-    car: `${id}`,
+    car: `${id}`
   })
-  
+
   const [errors, setErrors] = useState({
     name: '',
     title: '',
     text: '',
-    rating: '',
+    rating: ''
   })
 
   const [message, setMessage] = useState()
@@ -35,10 +43,8 @@ const CarPage = () => {
     const getData = async () => {
       const { data } = await axios.get(`/api/cars/${id}/`)
       setCar(data)
-      
     }
     getData()
-    
   }, [id, review])
   // console.log(car.id)
 
@@ -46,19 +52,18 @@ const CarPage = () => {
     if (review.name) return
     if (review.title) return
     if (review.text) return
-    
-    window.scrollTo(0, 0)
 
+    window.scrollTo(0, 0)
   })
-  
+
   const handleChange = (event) => {
     const newReview = { ...review, [event.target.name]: event.target.value }
     const newErrors = { ...errors, [event.target.name]: '' }
     setReview(newReview)
     setErrors(newErrors)
   }
-  
-  const handleStars = e => {
+
+  const handleStars = (e) => {
     const rating = e.target.attributes.getNamedItem('aria-posinset').value
     const newReview = { ...review, rating }
     setReview(newReview)
@@ -79,22 +84,20 @@ const CarPage = () => {
         await axios.post('/api/reviews/', review)
         location.reload()
       }
-
     } catch (err) {
       setErrors(err.response.data)
     }
-    
   }
 
   return (
     <Segment id="carPageSegment" inverted basic>
-      {car ?
+      {car ? (
         <Segment basic>
           <Header as="h1" textAlign="center" style={{ color: '#d4af37' }}>
             {car.title}
           </Header>
-          
-          <Segment basic id="redColor" >
+
+          <Segment basic id="redColor">
             <Carousel
               showThumbs={false}
               infiniteLoop={true}
@@ -103,23 +106,27 @@ const CarPage = () => {
               transitionTime={1000}
               autoFocus={true}
               swipeable={true}
-              showStatus={false}>
-              {car.image_set.map(image =>
-                <img key={image.id} src={image.image} ></img> 
-              )}
-
+              showStatus={false}
+            >
+              {car.image_set.map((image) => (
+                <img key={image.id} src={image.image}></img>
+              ))}
             </Carousel>
           </Segment>
-          
-          < CarSpec car={car}/>
+
+          <CarSpec car={car} />
 
           <Segment id="goldenColor" basic>
             <h5 style={{ textAlign: 'justify' }}>{car.description}</h5>
           </Segment>
 
-          <Segment inverted color="black" style={{ padding: '1px 15px 0 15px' }}>
+          <Segment
+            inverted
+            color="black"
+            style={{ padding: '1px 15px 0 15px' }}
+          >
             <Divider horizontal>
-              <Header as='h3' style={{ color: '#7b1113' }}>
+              <Header as="h3" style={{ color: '#7b1113' }}>
                 Services
               </Header>
             </Divider>
@@ -129,35 +136,39 @@ const CarPage = () => {
           <EnqForm />
 
           <Segment id="goldenColor" basic>
-
             <Divider horizontal>
-              <Header as='h3' style={{ color: '#7b1113' }}>
-                  Reviews
-              </Header>  
+              <Header as="h3" style={{ color: '#7b1113' }}>
+                Reviews
+              </Header>
             </Divider>
 
             <Segment style={{ background: '#7b1113' }}>
-              <Comment id="groupContent" >
+              <Comment id="groupContent">
                 <Comment.Content>
                   {car.review_set.length ? (
-                    car.review_set.map( review => {
+                    car.review_set.map((review) => {
                       return (
                         <Segment key={car.review_set.id}>
                           <h5>{review.name}</h5>
                           <Comment.Metadata>{review.title}</Comment.Metadata>
-                            
+
                           <Comment.Text>{review.text}</Comment.Text>
                           <Rating
                             defaultRating={review.rating}
                             icon="star"
                             maxRating={5}
-                            disabled/>
+                            disabled
+                          />
                         </Segment>
                       )
                     })
                   ) : (
-                    <Header textAlign="center" as="h2" style={{ color: '#d4af37' }}>
-                        Be first to comment and rate this Car!
+                    <Header
+                      textAlign="center"
+                      as="h2"
+                      style={{ color: '#d4af37' }}
+                    >
+                      Be first to comment and rate this Car!
                     </Header>
                   )}
 
@@ -180,9 +191,9 @@ const CarPage = () => {
                       placeholder="Your review..."
                       required
                     />
-                    
+
                     <p style={{ color: '#d4af37' }}>
-                        Please add a rating to submit your comment
+                      Please add a rating to submit your comment
                     </p>
                     <Rating
                       onClick={handleStars}
@@ -191,14 +202,14 @@ const CarPage = () => {
                       name="rating"
                       required
                     />
-                    
+
                     <Segment id="redColor" style={{ padding: '0' }} basic>
                       <Modal
                         header="Please, fill in all required fields"
                         onClose={() => setOpen(false)}
                         onOpen={() => setOpen(true)}
                         open={open}
-                        size='tiny'
+                        size="tiny"
                         trigger={
                           <Button
                             autoFocus
@@ -215,13 +226,11 @@ const CarPage = () => {
                 </Comment.Content>
               </Comment>
             </Segment>
-
-            
           </Segment>
         </Segment>
-        :
+      ) : (
         <h4> Loading</h4>
-      }
+      )}
     </Segment>
   )
 }

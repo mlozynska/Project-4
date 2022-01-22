@@ -6,7 +6,7 @@ const CarSpec = ({ car }) => {
   return  (
     <Segment style={{ background: '#7b1113' }} basic>
       <Card.Group style={{ justifyContent: 'center' }} items={5}>
-
+        
         <Card id="infoBox">
           <Card.Content style={{ background: 'black' }} textAlign="center">
             <Image id="icon" src={'https://www.bookaclassic.co.uk/images/calendar.png'} size="mini" />

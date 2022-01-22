@@ -38,7 +38,7 @@ class ReviewIndexView(APIView):
         else:
             return Response(review.errors, status=status.HTTP_422_UNPROCESSABLE_ENTITY)
 
-    # responder to GET /parks/
+    # respond to GET /parks/
     def get(self,request):
         reviews = Review.objects.all()
         serialized_reviews = ReviewSerializer(reviews, many=True)
