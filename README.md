@@ -1,5 +1,7 @@
 # Project-4 VintCars
 
+![](/assetes/images.Home.png)
+
 Deployed with Heroku [here](https://vintcars.herokuapp.com/)
 
 ## Overview
@@ -13,14 +15,14 @@ This was the final solo project for the General Assembly Software Engineering Bo
 ## Installation
 
 Clone or download the repo
-pipenv to install Python packages
-Enter Shell for the project pipenv shell
-Make migrations python manage.py makemigrations
-Migrate python manage.py migrate
-To start back-end python manage.py runserver
-Change into frontend folder cd frontend
-Install front-end dependencies yarn
-Run the frontend yarn start
+`pipenv` to install Python packages
+Enter Shell for the project `pipenv shell`
+Make migrations `python manage.py makemigrations`
+Migrate `python manage.py migrate`
+To start back-end `python manage.py runserver`
+Change into frontend folder `cd frontend`
+Install front-end dependencies `yarn`
+Run the frontend `yarn start`
 
 ## Brief
 
@@ -28,15 +30,15 @@ Create a full stack application with a React front-end and a Django back-end. Ap
 
 ## Technologies used
 
-### Backend:
+- ### Backend:
 
 Python, Django, Django REST Framework, PostgreSQL
 
-### Frontend:
+- ### Frontend:
 
 React.js, Axios, Semantic UI React, React Router Dom, React Responsive Carousel
 
-### Development tools:
+- ### Development tools:
 
 VS Code, yarn, Insomnia, Heroku, Figma, Git/GitHub, TablePlus, Formspark, reCAPTCHA.
 
@@ -45,7 +47,7 @@ VS Code, yarn, Insomnia, Heroku, Figma, Git/GitHub, TablePlus, Formspark, reCAPT
 As it was the first time when I was building a full application by myself with a limited deadline, I wanted to keep everything very simple to reach MVP as quickly as possible, and to have plenty of time to style and add different additional features.
 Planning process took almost two days. I decided to start with detailed wireframes and planning relationships. It definitely helped me to be more organised and to understand what and when to build.
 
-### Figma wireframes
+- ### Figma wireframes
 
 Relationships
 
