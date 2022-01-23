@@ -72,14 +72,25 @@ To manage my database I used the TablePlus app.
 ![](assets/images/tablePlus2.png)
 ![](assets/images/tablePlus3.png)
 
-- ### Frontend
-  I built the frontend with the help of React, React-router-dom, to get data from the backend I used Axios. To get all necessary information from my API I used Axios.
+    ### Frontend
+
+I built the frontend with the help of React, React-router-dom, to get data from the backend I used Axios. To get all necessary information from my API I used Axios.
+
+![](assets/images/FrontEnd.png)
 
 The next step was to add a review section to the CarPage and display random reviews on aHome page. For the review section I used two React hooks - useState and useEffect and created two functions - handleChange and handleSubmit.
 
+![](assets/images/handleChange.png)
+![](assets/images/handleSubmit.png)
+
 Also, I decided to add a rating possibility, to show with stars how satisfied the user is.
 
+![](assets/images/rating.png)
+![](assets/images/handleStars.png)
+
 For booking the car I used an enquiry form, where the user can leave all the information. When a filled in form is submitted Formspark it sends a messege with all details to the registered email.
+
+![](assets/images/enquireForm.png)
 
     Styling
 
