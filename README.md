@@ -59,9 +59,10 @@ Next step was building the backend.
 
 - ### Backend
 
-  This was my first experience of creating a backend using Python. I used Django to create a PostgreSQL database with RESTful features. I really enjoyed using Django, it was a very straightforward and efficient process of creating the PostgreSQL database. On building the backend and connecting it to the frontend I was working for two days.
+This was my first experience of creating a backend using Python. I used Django to create a PostgreSQL database with RESTful features. I really enjoyed using Django, it was a very straightforward and efficient process of creating the PostgreSQL database. On building the backend and connecting it to the frontend I was working for two days.
 
 - ### Models and relationship code examples
+
   In this app there are four models - Car, Reviews, Images and Services.
 
 ![](assets/images/ModelsANDRelation.png)
