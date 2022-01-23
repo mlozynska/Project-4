@@ -72,7 +72,7 @@ To manage my database I used the TablePlus app.
 ![](assets/images/tablePlus2.png)
 ![](assets/images/tablePlus3.png)
 
-    - ### Frontend
+- ### Frontend
 
 I built the frontend with the help of React, React-router-dom, to get data from the backend I used Axios. To get all necessary information from my API I used Axios.
 
@@ -92,34 +92,47 @@ For booking the car I used an enquiry form, where the user can leave all the inf
 
 ![](assets/images/enquireForm.png)
 
-    Styling
+- ### Styling
 
 For styling, I decided to use the Semantic UI styling framework. I used it in my previous project and really enjoyed using it.
 My application has three main pages which are Home, All Cars and Car Page. On Home page user can find general information about the company, how to find and book a car, can see picture carousel and read random reviews.
 
+![](assets/images/styling.png)
+
 All Cars page represents car cards catalogue, clicking on each card user can have detailed information about each car.
+
+![](assets/images/indexPage.png)
 
 Car Page contains a picture carousel, detailed information about the car, possible services with description, enquire form, reviews and rating section.
 
-Challenges
+![](assets/images/carPage.png)
+
+## Challenges
+
 The biggest challenge was to fix the error which appeared after adding some styling to the car page. The page started to download from the bottom. Spent a lot of time trying to figure out what exactly caused that error, but I couldn't find it. The solution is to force the page to scroll to the top with the help of useEffect hook, but It caused a new error - every time when a user changed the field of review form the page scrolled to the top. With the help of an instructor, I found the solution.
 
-Wins
+![](assets/images/challenges.png)
+
+## Wins
+
 This project was very important for me in rebuilding my self-confidence and motivation. I am very happy that I managed to create a working application by myself from scratch.
 Good styling. Reaching MVP as planned I had enough time for styling and responsive design.
 After submitting the enquire form by user, sending all information to the company's mailbox with the help of Formspark.
 
-Bugs
-reCAPTCHA is not working after deployment.
-After successfully adding a review thanks message “Thank you very much for your review!” it very quickly disappears, the user can’t properly read it, because the page is immediately reloading.
+## Bugs
 
-Key learnings
-PostgreSQL and relational database. Working with databases with the help of Django and Python on the backend improved my confidence building the backend of my application.
-Being able to adapt JavaScript and Python fundamentals which I have learned during the course in my project.
+- reCAPTCHA is not working after deployment.
+- After successfully adding a review thanks message “Thank you very much for your review!” it very quickly disappears, the user can’t properly read it, because the page is immediately reloading.
 
-Future improvements
-Fixing all existing bugs.
-Adding avarage rating for each car.
-Adding user authentication functionality.
-Possibility to delete comments.
-Adding payment possibility.
+## Key learnings
+
+- PostgreSQL and relational database. Working with databases with the help of Django and Python on the backend improved my confidence building the backend of my application.
+- Being able to adapt JavaScript and Python fundamentals which I have learned during the course in my project.
+
+## Future improvements
+
+- Fixing all existing bugs.
+- Adding avarage rating for each car.
+- Adding user authentication functionality.
+- Possibility to delete comments.
+- Adding payment possibility.
