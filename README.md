@@ -72,7 +72,7 @@ To manage my database I used the TablePlus app.
 ![](assets/images/tablePlus2.png)
 ![](assets/images/tablePlus3.png)
 
-    ### Frontend
+    - ### Frontend
 
 I built the frontend with the help of React, React-router-dom, to get data from the backend I used Axios. To get all necessary information from my API I used Axios.
 
