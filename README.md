@@ -40,7 +40,7 @@ React.js, Axios, Semantic UI React, React Router Dom, React Responsive Carousel
 
 - ### Development tools:
 
-VS Code, yarn, Insomnia, Heroku, Figma, Git/GitHub, TablePlus, Formspark, reCAPTCHA.
+VS Code, yarn, Insomnia, Heroku, Figma, Git/GitHub, TablePlus, Formspark, reCAPTCHA
 
 ## Approach
 
@@ -53,15 +53,16 @@ Planning process took almost two days. I decided to start with detailed wirefram
 
 Relationships
 
-![](assets/images/wireFrames.png)
+![](assets/images/Relationships.png)
 
 Next step was building the backend.
 
-Backend
-This was my first experience of creating a backend using Python. I used Django to create a PostgreSQL database with RESTful features. I really enjoyed using Django, it was a very straightforward and efficient process of creating the PostgreSQL database. On building the backend and connecting it to the frontend I was working for two days.
+- ### Backend
 
-Models and relationship code examples
-In this app there are four models - Car, Reviews, Images and Services.
+  This was my first experience of creating a backend using Python. I used Django to create a PostgreSQL database with RESTful features. I really enjoyed using Django, it was a very straightforward and efficient process of creating the PostgreSQL database. On building the backend and connecting it to the frontend I was working for two days.
+
+- ### Models and relationship code examples
+  In this app there are four models - Car, Reviews, Images and Services.
 
 ![](assets/images/ModelsANDRelation.png)
 
@@ -71,8 +72,8 @@ To manage my database I used the TablePlus app.
 ![](assets/images/tablePlus2.png)
 ![](assets/images/tablePlus3.png)
 
-Frontend
-I built the frontend with the help of React, React-router-dom, to get data from the backend I used Axios. To get all necessary information from my API I used Axios.
+- ### Frontend
+  I built the frontend with the help of React, React-router-dom, to get data from the backend I used Axios. To get all necessary information from my API I used Axios.
 
 The next step was to add a review section to the CarPage and display random reviews on aHome page. For the review section I used two React hooks - useState and useEffect and created two functions - handleChange and handleSubmit.
 
