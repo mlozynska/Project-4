@@ -14,15 +14,15 @@ This was the final solo project for the General Assembly Software Engineering Bo
 
 ## Installation
 
-Clone or download the repo
-`pipenv` to install Python packages
-Enter Shell for the project `pipenv shell`
-Make migrations `python manage.py makemigrations`
-Migrate `python manage.py migrate`
-To start back-end `python manage.py runserver`
-Change into frontend folder `cd frontend`
-Install front-end dependencies `yarn`
-Run the frontend `yarn start`
+- Clone or download the repo
+- `pipenv` to install Python packages
+- Enter Shell for the project `pipenv shell`
+- Make migrations `python manage.py makemigrations`
+- Migrate `python manage.py migrate`
+- To start back-end `python manage.py runserver`
+- Change into frontend folder `cd frontend`
+- Install front-end dependencies `yarn`
+- Run the frontend `yarn start`
 
 ## Brief
 
@@ -47,9 +47,13 @@ VS Code, yarn, Insomnia, Heroku, Figma, Git/GitHub, TablePlus, Formspark, reCAPT
 As it was the first time when I was building a full application by myself with a limited deadline, I wanted to keep everything very simple to reach MVP as quickly as possible, and to have plenty of time to style and add different additional features.
 Planning process took almost two days. I decided to start with detailed wireframes and planning relationships. It definitely helped me to be more organised and to understand what and when to build.
 
+![](assets/images/wireFrames.png)
+
 - ### Figma wireframes
 
 Relationships
+
+![](assets/images/wireFrames.png)
 
 Next step was building the backend.
 
@@ -59,7 +63,13 @@ This was my first experience of creating a backend using Python. I used Django t
 Models and relationship code examples
 In this app there are four models - Car, Reviews, Images and Services.
 
+![](assets/images/ModelsANDRelation.png)
+
 To manage my database I used the TablePlus app.
+
+![](assets/images/tablePlus1.png)
+![](assets/images/tablePlus2.png)
+![](assets/images/tablePlus3.png)
 
 Frontend
 I built the frontend with the help of React, React-router-dom, to get data from the backend I used Axios. To get all necessary information from my API I used Axios.
