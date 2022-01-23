@@ -47,11 +47,11 @@ VS Code, yarn, Insomnia, Heroku, Figma, Git/GitHub, TablePlus, Formspark, reCAPT
 As it was the first time when I was building a full application by myself with a limited deadline, I wanted to keep everything very simple to reach MVP as quickly as possible, and to have plenty of time to style and add different additional features.
 Planning process took almost two days. I decided to start with detailed wireframes and planning relationships. It definitely helped me to be more organised and to understand what and when to build.
 
-![](assets/images/wireFrames.png)
-
 - ### Figma wireframes
 
-Relationships
+![](assets/images/wireFrames.png)
+
+- ### Relationships
 
 ![](assets/images/Relationships.png)
 
